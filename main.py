@@ -10,3 +10,10 @@
 #     return n
 
 # print(next_palindrome(123))  # 131
+
+
+
+age = int(input('yosh: '))
+
+if age > 0 and 18 > age:
+    print('siz xali voyaga yetmagansiz')
