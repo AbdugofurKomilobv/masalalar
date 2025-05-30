@@ -43,18 +43,43 @@
 #         print("R.I.P – bu yoshda yashaganlar juda kam. Balki noto‘g‘ri kiritgandirsiz?")
 # except ValueError:
 #     print("Iltimos, butun son kiriting.")
+
+
+
+
+
 # 1-QISM: Juft va toq sonlarni ajratish
-juft_sonlar = []
-toq_sonlar = []
+# juft_sonlar = []
+# toq_sonlar = []
 
-for i in range(4):
-    son = int(input(f"{i+1}-sonni kiriting: "))
-    if son % 2 == 0:
-        juft_sonlar.append(son)
-    else:
-        toq_sonlar.append(son)
+# for i in range(4):
+#     son = int(input(f"{i+1}-sonni kiriting: "))
+#     if son % 2 == 0:
+#         juft_sonlar.append(son)
+#     else:
+#         toq_sonlar.append(son)
 
-print("Juft sonlar:", juft_sonlar)
-print("Toq sonlar:", toq_sonlar)
+# print("Juft sonlar:", juft_sonlar)
+# print("Toq sonlar:", toq_sonlar)
 
 
+# 2-QISM: Fruits ro'yxati bilan ishlash
+fruits = ["apple", "banana", "cherry", "elderberry"]
+print("\nBoshlang'ich fruits ro'yxati:", fruits)
+
+# 'cherry' ni pop bilan o'chirish (index orqali)
+fruits.pop(2)  # cherry indeksda 2-da
+
+# 'elderberry' ni remove bilan o'chirish (qiymat orqali)
+fruits.remove("elderberry")
+
+print("O'zgartirilgan fruits ro'yxati:", fruits)
+
+# 3-QISM: Ikkita ro'yxatni birlashtirish
+birinchi_royxat = [1, 2, 3, 4, 5]
+ikkinchi_royxat = [6, 7, 8, 9, 10]
+
+# Birinchi ro'yxatdagi 2 ta boshlang'ich elementni ikkinchisiga qo‘shish
+ikkinchi_royxat.extend(birinchi_royxat[:2])
+
+print("\nYangilangan ikkinchi ro'yxat:", ikkinchi_royxat)
