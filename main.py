@@ -17,3 +17,7 @@ age = int(input('yosh: '))
 
 if age > 0 and 18 > age:
     print('siz xali voyaga yetmagansiz')
+elif age >= 18 and age <= 150:
+    print('siz voyaga yetgansiz')
+else:
+    print('R.I.P')
