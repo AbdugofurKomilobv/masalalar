@@ -86,3 +86,8 @@
 
 
 
+import random
+from colorama import Fore, init
+
+# colorama kutubxonasini ishga tushiramiz
+init(autoreset=True)
