@@ -64,22 +64,25 @@
 
 
 # 2-QISM: Fruits ro'yxati bilan ishlash
-fruits = ["apple", "banana", "cherry", "elderberry"]
-print("\nBoshlang'ich fruits ro'yxati:", fruits)
+# fruits = ["apple", "banana", "cherry", "elderberry"]
+# print("\nBoshlang'ich fruits ro'yxati:", fruits)
 
-# 'cherry' ni pop bilan o'chirish (index orqali)
-fruits.pop(2)  # cherry indeksda 2-da
+# # 'cherry' ni pop bilan o'chirish (index orqali)
+# fruits.pop(2)  # cherry indeksda 2-da
 
-# 'elderberry' ni remove bilan o'chirish (qiymat orqali)
-fruits.remove("elderberry")
+# # 'elderberry' ni remove bilan o'chirish (qiymat orqali)
+# fruits.remove("elderberry")
 
-print("O'zgartirilgan fruits ro'yxati:", fruits)
+# print("O'zgartirilgan fruits ro'yxati:", fruits)
 
-# 3-QISM: Ikkita ro'yxatni birlashtirish
-birinchi_royxat = [1, 2, 3, 4, 5]
-ikkinchi_royxat = [6, 7, 8, 9, 10]
+# # 3-QISM: Ikkita ro'yxatni birlashtirish
+# birinchi_royxat = [1, 2, 3, 4, 5]
+# ikkinchi_royxat = [6, 7, 8, 9, 10]
 
-# Birinchi ro'yxatdagi 2 ta boshlang'ich elementni ikkinchisiga qo‘shish
-ikkinchi_royxat.extend(birinchi_royxat[:2])
+# # Birinchi ro'yxatdagi 2 ta boshlang'ich elementni ikkinchisiga qo‘shish
+# ikkinchi_royxat.extend(birinchi_royxat[:2])
 
-print("\nYangilangan ikkinchi ro'yxat:", ikkinchi_royxat)
+# print("\nYangilangan ikkinchi ro'yxat:", ikkinchi_royxat)
+
+
+
