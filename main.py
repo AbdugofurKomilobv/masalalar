@@ -96,3 +96,10 @@ juft_sonlar = []
 toq_sonlar = []
 
 i = 0
+
+while i < 10:
+    son = random.randint(1,100)
+    if son % 2 == 0:
+        juft_sonlar.append(son)
+    else:
+        toq_sonlar.append(son)
