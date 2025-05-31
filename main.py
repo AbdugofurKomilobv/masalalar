@@ -103,3 +103,8 @@ while i < 10:
         juft_sonlar.append(son)
     else:
         toq_sonlar.append(son)
+    i+=1
+
+
+print(Fore.GREEN + "juft sonlar", juft_sonlar)
+print(Fore.RED + "toq sonlar", toq_sonlar)
