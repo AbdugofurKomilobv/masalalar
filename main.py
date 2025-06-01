@@ -110,19 +110,41 @@ from colorama import Fore, init
 # print(Fore.RED + "toq sonlar", toq_sonlar)
 
 
+# init(autoreset=True)
+
+# juft_kvadrat = []
+# toq_kub = []
+
+# i = 0
+# while i < 10:
+#     son = random.randint(1, 50)
+#     if son % 2 == 0:
+#         juft_kvadrat.append(son ** 2)
+#     else:
+#         toq_kub.append(son ** 3)
+#     i += 1
+
+# print(Fore.GREEN + "Juft sonlar kvadrati:", juft_kvadrat)
+# print(Fore.RED + "Toq sonlar kubi:", toq_kub)
+
+
+
+
 init(autoreset=True)
 
-juft_kvadrat = []
-toq_kub = []
+juft_sonlar = []
+toq_sonlar = []
+
+n = int(input("Nechta son hosil qilinsin? "))
 
 i = 0
-while i < 10:
-    son = random.randint(1, 50)
+while i < n:
+    son = random.randint(1, 100)
     if son % 2 == 0:
-        juft_kvadrat.append(son ** 2)
+        juft_sonlar.append(son)
     else:
-        toq_kub.append(son ** 3)
+        toq_sonlar.append(son)
     i += 1
 
-print(Fore.GREEN + "Juft sonlar kvadrati:", juft_kvadrat)
-print(Fore.RED + "Toq sonlar kubi:", toq_kub)
+print(Fore.GREEN + f"Juft sonlar ({len(juft_sonlar)} ta):", juft_sonlar)
+print(Fore.RED + f"Toq sonlar ({len(toq_sonlar)} ta):", toq_sonlar)
