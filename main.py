@@ -183,22 +183,40 @@ from colorama import Fore, init
 # print(Fore.RED + "50 dan katta toq sonlar:", toq_katta)
 
 
-juft = []
-toq = []
+# juft = []
+# toq = []
+
+# i = 0
+# while i < 10:
+#     n = random.randint(1, 20)
+#     if n % 2 == 0:
+#         juft.append(n)
+#     else:
+#         toq.append(n)
+#     i += 1
+
+# juft_yigindi = sum(juft)
+# toq_kopaytma = 1
+# for t in toq:
+#     toq_kopaytma *= t
+
+# print(Fore.GREEN + f"Juft sonlar: {juft} | Yig‘indisi: {juft_yigindi}")
+# print(Fore.RED + f"Toq sonlar: {toq} | Ko‘paytmasi: {toq_kopaytma}")
+
+
+init(autoreset=True)
+
+hamma_sonlar = []
 
 i = 0
-while i < 10:
-    n = random.randint(1, 20)
-    if n % 2 == 0:
-        juft.append(n)
-    else:
-        toq.append(n)
+while i < 20:
+    son = random.randint(1, 100)
+    hamma_sonlar.append(son)
     i += 1
 
-juft_yigindi = sum(juft)
-toq_kopaytma = 1
-for t in toq:
-    toq_kopaytma *= t
+juftlar = [x for x in hamma_sonlar if x % 2 == 0]
+toq = [x for x in hamma_sonlar if x % 2 != 0]
 
-print(Fore.GREEN + f"Juft sonlar: {juft} | Yig‘indisi: {juft_yigindi}")
-print(Fore.RED + f"Toq sonlar: {toq} | Ko‘paytmasi: {toq_kopaytma}")
+print(Fore.YELLOW + "Barcha sonlar:", hamma_sonlar)
+print(Fore.GREEN + "Juft sonlar:", juftlar)
+print(Fore.RED + "Toq sonlar:", toq)
