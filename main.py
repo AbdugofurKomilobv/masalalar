@@ -150,15 +150,34 @@ from colorama import Fore, init
 # print(Fore.RED + f"Toq sonlar ({len(toq_sonlar)} ta):", toq_sonlar)
 
 
-juft = []
-toq = []
+# juft = []
+# toq = []
 
-while len(juft) < 5 or len(toq) < 5:
-    s = random.randint(1, 100)
-    if s % 2 == 0 and len(juft) < 5:
-        juft.append(s)
-    elif s % 2 == 1 and len(toq) < 5:
-        toq.append(s)
+# while len(juft) < 5 or len(toq) < 5:
+#     s = random.randint(1, 100)
+#     if s % 2 == 0 and len(juft) < 5:
+#         juft.append(s)
+#     elif s % 2 == 1 and len(toq) < 5:
+#         toq.append(s)
 
-print(Fore.GREEN + "5 ta juft son:", juft)
-print(Fore.RED + "5 ta toq son:", toq)
+# print(Fore.GREEN + "5 ta juft son:", juft)
+# print(Fore.RED + "5 ta toq son:", toq)
+
+
+init(autoreset=True)
+
+juft_katta = []
+toq_katta = []
+
+i = 0
+while i < 15:
+    son = random.randint(1, 100)
+    if son > 50:
+        if son % 2 == 0:
+            juft_katta.append(son)
+        else:
+            toq_katta.append(son)
+        i += 1
+
+print(Fore.GREEN + "50 dan katta juft sonlar:", juft_katta)
+print(Fore.RED + "50 dan katta toq sonlar:", toq_katta)
