@@ -89,22 +89,40 @@
 import random
 from colorama import Fore, init
 
-# colorama kutubxonasini ishga tushiramiz
+# # colorama kutubxonasini ishga tushiramiz
+# init(autoreset=True)
+
+# juft_sonlar = []
+# toq_sonlar = []
+
+# i = 0
+
+# while i < 10:
+#     son = random.randint(1,100)
+#     if son % 2 == 0:
+#         juft_sonlar.append(son)
+#     else:
+#         toq_sonlar.append(son)
+#     i+=1
+
+
+# print(Fore.GREEN + "juft sonlar", juft_sonlar)
+# print(Fore.RED + "toq sonlar", toq_sonlar)
+
+
 init(autoreset=True)
 
-juft_sonlar = []
-toq_sonlar = []
+juft_kvadrat = []
+toq_kub = []
 
 i = 0
-
 while i < 10:
-    son = random.randint(1,100)
+    son = random.randint(1, 50)
     if son % 2 == 0:
-        juft_sonlar.append(son)
+        juft_kvadrat.append(son ** 2)
     else:
-        toq_sonlar.append(son)
-    i+=1
+        toq_kub.append(son ** 3)
+    i += 1
 
-
-print(Fore.GREEN + "juft sonlar", juft_sonlar)
-print(Fore.RED + "toq sonlar", toq_sonlar)
+print(Fore.GREEN + "Juft sonlar kvadrati:", juft_kvadrat)
+print(Fore.RED + "Toq sonlar kubi:", toq_kub)
