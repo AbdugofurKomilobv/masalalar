@@ -220,3 +220,16 @@ from colorama import Fore, init
 # print(Fore.YELLOW + "Barcha sonlar:", hamma_sonlar)
 # print(Fore.GREEN + "Juft sonlar:", juftlar)
 # print(Fore.RED + "Toq sonlar:", toq)
+
+
+init(autoreset=True)
+
+i = 0
+while i < 10:
+    son = random.randint(1, 100)
+    kvadrat = son ** 2
+    if son % 2 == 0:
+        print(Fore.GREEN + f"{son} – juft, kvadrati: {kvadrat}")
+    else:
+        print(Fore.RED + f"{son} – toq, kvadrati: {kvadrat}")
+    i += 1
