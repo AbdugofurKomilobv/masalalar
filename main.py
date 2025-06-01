@@ -164,20 +164,41 @@ from colorama import Fore, init
 # print(Fore.RED + "5 ta toq son:", toq)
 
 
-init(autoreset=True)
+# init(autoreset=True)
 
-juft_katta = []
-toq_katta = []
+# juft_katta = []
+# toq_katta = []
+
+# i = 0
+# while i < 15:
+#     son = random.randint(1, 100)
+#     if son > 50:
+#         if son % 2 == 0:
+#             juft_katta.append(son)
+#         else:
+#             toq_katta.append(son)
+#         i += 1
+
+# print(Fore.GREEN + "50 dan katta juft sonlar:", juft_katta)
+# print(Fore.RED + "50 dan katta toq sonlar:", toq_katta)
+
+
+juft = []
+toq = []
 
 i = 0
-while i < 15:
-    son = random.randint(1, 100)
-    if son > 50:
-        if son % 2 == 0:
-            juft_katta.append(son)
-        else:
-            toq_katta.append(son)
-        i += 1
+while i < 10:
+    n = random.randint(1, 20)
+    if n % 2 == 0:
+        juft.append(n)
+    else:
+        toq.append(n)
+    i += 1
 
-print(Fore.GREEN + "50 dan katta juft sonlar:", juft_katta)
-print(Fore.RED + "50 dan katta toq sonlar:", toq_katta)
+juft_yigindi = sum(juft)
+toq_kopaytma = 1
+for t in toq:
+    toq_kopaytma *= t
+
+print(Fore.GREEN + f"Juft sonlar: {juft} | Yig‘indisi: {juft_yigindi}")
+print(Fore.RED + f"Toq sonlar: {toq} | Ko‘paytmasi: {toq_kopaytma}")
