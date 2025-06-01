@@ -204,19 +204,19 @@ from colorama import Fore, init
 # print(Fore.RED + f"Toq sonlar: {toq} | Ko‘paytmasi: {toq_kopaytma}")
 
 
-init(autoreset=True)
+# init(autoreset=True)
 
-hamma_sonlar = []
+# hamma_sonlar = []
 
-i = 0
-while i < 20:
-    son = random.randint(1, 100)
-    hamma_sonlar.append(son)
-    i += 1
+# i = 0
+# while i < 20:
+#     son = random.randint(1, 100)
+#     hamma_sonlar.append(son)
+#     i += 1
 
-juftlar = [x for x in hamma_sonlar if x % 2 == 0]
-toq = [x for x in hamma_sonlar if x % 2 != 0]
+# juftlar = [x for x in hamma_sonlar if x % 2 == 0]
+# toq = [x for x in hamma_sonlar if x % 2 != 0]
 
-print(Fore.YELLOW + "Barcha sonlar:", hamma_sonlar)
-print(Fore.GREEN + "Juft sonlar:", juftlar)
-print(Fore.RED + "Toq sonlar:", toq)
+# print(Fore.YELLOW + "Barcha sonlar:", hamma_sonlar)
+# print(Fore.GREEN + "Juft sonlar:", juftlar)
+# print(Fore.RED + "Toq sonlar:", toq)
