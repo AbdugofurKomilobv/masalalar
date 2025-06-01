@@ -130,21 +130,35 @@ from colorama import Fore, init
 
 
 
-init(autoreset=True)
+# init(autoreset=True)
 
-juft_sonlar = []
-toq_sonlar = []
+# juft_sonlar = []
+# toq_sonlar = []
 
-n = int(input("Nechta son hosil qilinsin? "))
+# n = int(input("Nechta son hosil qilinsin? "))
 
-i = 0
-while i < n:
-    son = random.randint(1, 100)
-    if son % 2 == 0:
-        juft_sonlar.append(son)
-    else:
-        toq_sonlar.append(son)
-    i += 1
+# i = 0
+# while i < n:
+#     son = random.randint(1, 100)
+#     if son % 2 == 0:
+#         juft_sonlar.append(son)
+#     else:
+#         toq_sonlar.append(son)
+#     i += 1
 
-print(Fore.GREEN + f"Juft sonlar ({len(juft_sonlar)} ta):", juft_sonlar)
-print(Fore.RED + f"Toq sonlar ({len(toq_sonlar)} ta):", toq_sonlar)
+# print(Fore.GREEN + f"Juft sonlar ({len(juft_sonlar)} ta):", juft_sonlar)
+# print(Fore.RED + f"Toq sonlar ({len(toq_sonlar)} ta):", toq_sonlar)
+
+
+juft = []
+toq = []
+
+while len(juft) < 5 or len(toq) < 5:
+    s = random.randint(1, 100)
+    if s % 2 == 0 and len(juft) < 5:
+        juft.append(s)
+    elif s % 2 == 1 and len(toq) < 5:
+        toq.append(s)
+
+print(Fore.GREEN + "5 ta juft son:", juft)
+print(Fore.RED + "5 ta toq son:", toq)
