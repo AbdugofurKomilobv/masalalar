@@ -53,17 +53,28 @@
 #     else:
 #         print("Noto‘g‘ri tanlov!")
 
-while True:
-    message = input("Sen: ").lower()
+# while True:
+#     message = input("Sen: ").lower()
     
-    if "salom" in message:
-        print("Bot: Salom! Yaxshimisan?")
-    elif "yaxshi" in message:
-        print("Bot: Zo'r-ku! 😊")
-    elif "isming nima" in message:
-        print("Bot: Meni 'MegaBot' deb chaqir.")
-    elif "hayr" in message or "xayr" in message:
-        print("Bot: Xayr! Ko‘rishguncha!")
-        break
-    else:
-        print("Bot: Buni tushunmadim, boshqacharoq yoz-chi? 🤔")
+#     if "salom" in message:
+#         print("Bot: Salom! Yaxshimisan?")
+#     elif "yaxshi" in message:
+#         print("Bot: Zo'r-ku! 😊")
+#     elif "isming nima" in message:
+#         print("Bot: Meni 'MegaBot' deb chaqir.")
+#     elif "hayr" in message or "xayr" in message:
+#         print("Bot: Xayr! Ko‘rishguncha!")
+#         break
+#     else:
+#         print("Bot: Buni tushunmadim, boshqacharoq yoz-chi? 🤔")
+
+import time
+
+sekund = int(input("Necha sekund kutamiz? "))
+print("Taymer boshlandi!")
+
+for i in range(sekund, 0, -1):
+    print(i)
+    time.sleep(1)
+
+print("⏰ Taymer tugadi!")
