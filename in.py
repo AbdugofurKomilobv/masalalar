@@ -68,13 +68,31 @@
 #     else:
 #         print("Bot: Buni tushunmadim, boshqacharoq yoz-chi? 🤔")
 
-import time
+# import time
 
-sekund = int(input("Necha sekund kutamiz? "))
-print("Taymer boshlandi!")
+# sekund = int(input("Necha sekund kutamiz? "))
+# print("Taymer boshlandi!")
 
-for i in range(sekund, 0, -1):
-    print(i)
-    time.sleep(1)
+# for i in range(sekund, 0, -1):
+#     print(i)
+#     time.sleep(1)
 
-print("⏰ Taymer tugadi!")
+# print("⏰ Taymer tugadi!")
+
+
+import random
+
+score = 0
+
+for i in range(5):
+    a = random.randint(1, 10)
+    b = random.randint(1, 10)
+    answer = int(input(f"{a} + {b} = "))
+    if answer == a + b:
+        print("✅ To‘g‘ri!")
+        score += 1
+    else:
+        print(f"❌ Noto‘g‘ri! Javob: {a + b}")
+
+print(f"\nUmumiy natija: {score}/5")
+
