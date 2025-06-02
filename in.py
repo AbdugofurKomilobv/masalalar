@@ -80,19 +80,39 @@
 # print("⏰ Taymer tugadi!")
 
 
+# import random
+
+# score = 0
+
+# for i in range(5):
+#     a = random.randint(1, 10)
+#     b = random.randint(1, 10)
+#     answer = int(input(f"{a} + {b} = "))
+#     if answer == a + b:
+#         print("✅ To‘g‘ri!")
+#         score += 1
+#     else:
+#         print(f"❌ Noto‘g‘ri! Javob: {a + b}")
+
+# print(f"\nUmumiy natija: {score}/5")
+
+
+
 import random
 
-score = 0
+symbols = ["🍒", "🍋", "🍊", "⭐", "7️⃣"]
 
-for i in range(5):
-    a = random.randint(1, 10)
-    b = random.randint(1, 10)
-    answer = int(input(f"{a} + {b} = "))
-    if answer == a + b:
-        print("✅ To‘g‘ri!")
-        score += 1
+while True:
+    input("🎰 PLAY uchun Enter bosing...")
+    slots = [random.choice(symbols) for _ in range(3)]
+    print(" | ".join(slots))
+    
+    if slots.count(slots[0]) == 3:
+        print("🎉 Jackpot! Hammayoq bir xil!")
+    elif len(set(slots)) == 2:
+        print("😄 Yaxshi urinish!")
     else:
-        print(f"❌ Noto‘g‘ri! Javob: {a + b}")
-
-print(f"\nUmumiy natija: {score}/5")
-
+        print("😢 Bu safar omad bo‘lmadi...")
+    
+    if input("Yana o‘ynaysanmi? (ha/yo‘q): ") != "ha":
+        break
