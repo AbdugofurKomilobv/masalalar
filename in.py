@@ -35,20 +35,35 @@
 #         break
 
 
-birthdays = {}
+# birthdays = {}
+
+# while True:
+#     print("\n1. Tug‘ilgan kun qo‘shish\n2. Ko‘rish\n3. Chiqish")
+#     choice = input("Tanlang: ")
+    
+#     if choice == "1":
+#         name = input("Ism: ")
+#         date = input("Tug‘ilgan sana (dd-mm): ")
+#         birthdays[name] = date
+#     elif choice == "2":
+#         for name, date in birthdays.items():
+#             print(f"{name} - {date}")
+#     elif choice == "3":
+#         break
+#     else:
+#         print("Noto‘g‘ri tanlov!")
 
 while True:
-    print("\n1. Tug‘ilgan kun qo‘shish\n2. Ko‘rish\n3. Chiqish")
-    choice = input("Tanlang: ")
+    message = input("Sen: ").lower()
     
-    if choice == "1":
-        name = input("Ism: ")
-        date = input("Tug‘ilgan sana (dd-mm): ")
-        birthdays[name] = date
-    elif choice == "2":
-        for name, date in birthdays.items():
-            print(f"{name} - {date}")
-    elif choice == "3":
+    if "salom" in message:
+        print("Bot: Salom! Yaxshimisan?")
+    elif "yaxshi" in message:
+        print("Bot: Zo'r-ku! 😊")
+    elif "isming nima" in message:
+        print("Bot: Meni 'MegaBot' deb chaqir.")
+    elif "hayr" in message or "xayr" in message:
+        print("Bot: Xayr! Ko‘rishguncha!")
         break
     else:
-        print("Noto‘g‘ri tanlov!")
+        print("Bot: Buni tushunmadim, boshqacharoq yoz-chi? 🤔")
