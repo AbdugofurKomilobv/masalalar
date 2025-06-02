@@ -18,18 +18,37 @@
 #     else:
 #         print("Noto‘g‘ri tanlov!")
 
-import random
+# import random
 
-secret = random.randint(1, 100)
-tries = 0
+# secret = random.randint(1, 100)
+# tries = 0
+
+# while True:
+#     guess = int(input("1 dan 100 gacha son kiriting: "))
+#     tries += 1
+#     if guess < secret:
+#         print("Ko‘proq son kiriting!")
+#     elif guess > secret:
+#         print("Kamroq son kiriting!")
+#     else:
+#         print(f"Topdingiz! Urinishlar soni: {tries}")
+#         break
+
+
+birthdays = {}
 
 while True:
-    guess = int(input("1 dan 100 gacha son kiriting: "))
-    tries += 1
-    if guess < secret:
-        print("Ko‘proq son kiriting!")
-    elif guess > secret:
-        print("Kamroq son kiriting!")
-    else:
-        print(f"Topdingiz! Urinishlar soni: {tries}")
+    print("\n1. Tug‘ilgan kun qo‘shish\n2. Ko‘rish\n3. Chiqish")
+    choice = input("Tanlang: ")
+    
+    if choice == "1":
+        name = input("Ism: ")
+        date = input("Tug‘ilgan sana (dd-mm): ")
+        birthdays[name] = date
+    elif choice == "2":
+        for name, date in birthdays.items():
+            print(f"{name} - {date}")
+    elif choice == "3":
         break
+    else:
+        print("Noto‘g‘ri tanlov!")
