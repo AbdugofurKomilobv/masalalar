@@ -73,16 +73,32 @@
 # r = Rectangle(4, 5)
 # print("Yuza:", r.area())
 
-class BankAccount:
-    def __init__(self, owner, balance):
-        self.owner = owner
-        self.balance = balance
+# class BankAccount:
+#     def __init__(self, owner, balance):
+#         self.owner = owner
+#         self.balance = balance
 
-    def withdraw(self, amount):
-        if self.balance >= amount:
-            self.balance -= amount
-            return f"{amount} yechildi. Qolgan: {self.balance}"
-        return "Yetarli mablag' yo'q"
+#     def withdraw(self, amount):
+#         if self.balance >= amount:
+#             self.balance -= amount
+#             return f"{amount} yechildi. Qolgan: {self.balance}"
+#         return "Yetarli mablag' yo'q"
 
-b = BankAccount("Javlon", 2000)
-print(b.withdraw(500))
+# b = BankAccount("Javlon", 2000)
+# print(b.withdraw(500))
+
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+
+    def show(self):
+        return f"{self.title} by {self.author}"
+
+books = [
+    Book("Alkimyogar", "Paulo Coelho"),
+    Book("Kichkina shahzoda", "Exupery")
+]
+
+for b in books:
+    print(b.show())
