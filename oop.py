@@ -62,14 +62,27 @@
 # print(s1.info())
 
 
-class Rectangle:
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
 
-    def area(self):
-        return self.width * self.height
+#     def area(self):
+#         return self.width * self.height
 
-r = Rectangle(4, 5)
-print("Yuza:", r.area())
+# r = Rectangle(4, 5)
+# print("Yuza:", r.area())
 
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+
+    def withdraw(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+            return f"{amount} yechildi. Qolgan: {self.balance}"
+        return "Yetarli mablag' yo'q"
+
+b = BankAccount("Javlon", 2000)
+print(b.withdraw(500))
