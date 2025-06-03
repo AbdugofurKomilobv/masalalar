@@ -36,16 +36,40 @@
 # acc.deposit(500)
 # print(acc.get_balance())
 
-class Cat:
-    def sound(self):
-        return "Miyov"
+# class Cat:
+#     def sound(self):
+#         return "Miyov"
 
-class Dog:
-    def sound(self):
-        return "Vov"
+# class Dog:
+#     def sound(self):
+#         return "Vov"
 
-def make_sound(animal):
-    print(animal.sound())
+# def make_sound(animal):
+#     print(animal.sound())
 
-make_sound(Cat())
-make_sound(Dog())
+# make_sound(Cat())
+# make_sound(Dog())
+
+# class Student:
+#     def __init__(self, name, grade):
+#         self.name = name
+#         self.grade = grade
+
+#     def info(self):
+#         return f"{self.name} - {self.grade}-sinfi"
+
+# s1 = Student("Ali", 9)
+# print(s1.info())
+
+
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+r = Rectangle(4, 5)
+print("Yuza:", r.area())
+
