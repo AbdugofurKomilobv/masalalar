@@ -104,17 +104,25 @@
 #     print(b.show())
 
 
-class Person:
-    def __init__(self, name):
-        self.name = name
+# class Person:
+#     def __init__(self, name):
+#         self.name = name
 
-class Employee(Person):
-    def __init__(self, name, job):
-        super().__init__(name)
-        self.job = job
+# class Employee(Person):
+#     def __init__(self, name, job):
+#         super().__init__(name)
+#         self.job = job
 
-    def describe(self):
-        return f"{self.name} - {self.job}"
+#     def describe(self):
+#         return f"{self.name} - {self.job}"
 
-e = Employee("Kamol", "Dasturchi")
-print(e.describe())
+# e = Employee("Kamol", "Dasturchi")
+# print(e.describe())
+
+
+class MathTools:
+    @staticmethod
+    def square(x):
+        return x * x
+
+print(MathTools.square(4))
