@@ -22,17 +22,30 @@
 # print(dog.speak())
 
 
-class Account:
-    def __init__(self, balance):
-        self.__balance = balance
+# class Account:
+#     def __init__(self, balance):
+#         self.__balance = balance
 
-    def deposit(self, amount):
-        self.__balance += amount
+#     def deposit(self, amount):
+#         self.__balance += amount
 
-    def get_balance(self):
-        return self.__balance
+#     def get_balance(self):
+#         return self.__balance
 
-acc = Account(1000)
-acc.deposit(500)
-print(acc.get_balance())
+# acc = Account(1000)
+# acc.deposit(500)
+# print(acc.get_balance())
 
+class Cat:
+    def sound(self):
+        return "Miyov"
+
+class Dog:
+    def sound(self):
+        return "Vov"
+
+def make_sound(animal):
+    print(animal.sound())
+
+make_sound(Cat())
+make_sound(Dog())
