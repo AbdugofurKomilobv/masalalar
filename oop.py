@@ -87,18 +87,34 @@
 # b = BankAccount("Javlon", 2000)
 # print(b.withdraw(500))
 
-class Book:
-    def __init__(self, title, author):
-        self.title = title
-        self.author = author
+# class Book:
+#     def __init__(self, title, author):
+#         self.title = title
+#         self.author = author
 
-    def show(self):
-        return f"{self.title} by {self.author}"
+#     def show(self):
+#         return f"{self.title} by {self.author}"
 
-books = [
-    Book("Alkimyogar", "Paulo Coelho"),
-    Book("Kichkina shahzoda", "Exupery")
-]
+# books = [
+#     Book("Alkimyogar", "Paulo Coelho"),
+#     Book("Kichkina shahzoda", "Exupery")
+# ]
 
-for b in books:
-    print(b.show())
+# for b in books:
+#     print(b.show())
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+class Employee(Person):
+    def __init__(self, name, job):
+        super().__init__(name)
+        self.job = job
+
+    def describe(self):
+        return f"{self.name} - {self.job}"
+
+e = Employee("Kamol", "Dasturchi")
+print(e.describe())
