@@ -14,3 +14,20 @@ def show_menu():
     print("4. Savatni ko‘rish")
     print("5. Xarid qilish")
     print("6. Chiqish")
+
+def add_product():
+    name = input("Mahsulot nomi: ")
+    try:
+        price = float(input("Narxi (so‘m): "))
+        products.append({"name": name, "price": price})
+        print(f"✅ {name} qo‘shildi.")
+    except ValueError:
+        print("❌ Narx noto‘g‘ri.")
+
+def show_products():
+    if not products:
+        print("❗ Mahsulotlar yo‘q.")
+        return
+    print("=== Mahsulotlar ===")
+    for i, p in enumerate(products, 1):
+        print(f"{i}. {p['name']} - {p['price']} so‘m")
