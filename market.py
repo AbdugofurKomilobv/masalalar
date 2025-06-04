@@ -31,3 +31,25 @@ def show_products():
     print("=== Mahsulotlar ===")
     for i, p in enumerate(products, 1):
         print(f"{i}. {p['name']} - {p['price']} so‘m")
+def add_to_cart():
+    show_products()
+    try:
+        index = int(input("Savatga qo‘shmoqchi bo‘lgan mahsulot raqami: ")) - 1
+        if 0 <= index < len(products):
+            cart.append(products[index])
+            print(f"🛒 {products[index]['name']} savatga qo‘shildi.")
+        else:
+            print("❌ Noto‘g‘ri raqam.")
+    except ValueError:
+        print("⚠️ Raqam kiriting.")
+
+def show_cart():
+    if not cart:
+        print("🛒 Savat bo‘sh.")
+        return
+    total = 0
+    print("=== Savat ===")
+    for i, item in enumerate(cart, 1):
+        print(f"{i}. {item['name']} - {item['price']} so‘m")
+        total += item['price']
+    print(f"💰 Umumiy: {total} so‘m")
