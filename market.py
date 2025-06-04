@@ -64,3 +64,25 @@ def checkout():
         cart.clear()
     else:
         print("❌ To‘lov bekor qilindi.")
+while True:
+    show_menu()
+    choice = input("Tanlov (1-6): ")
+
+    if choice == "1":
+        add_product()
+    elif choice == "2":
+        show_products()
+    elif choice == "3":
+        add_to_cart()
+    elif choice == "4":
+        show_cart()
+    elif choice == "5":
+        checkout()
+    elif choice == "6":
+        print("Marketdan chiqildi.")
+        break
+    else:
+        print("Noto‘g‘ri tanlov.")
+    
+    input("\nDavom etish uchun Enter...")
+    clear()
