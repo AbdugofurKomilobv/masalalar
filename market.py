@@ -53,3 +53,14 @@ def show_cart():
         print(f"{i}. {item['name']} - {item['price']} so‘m")
         total += item['price']
     print(f"💰 Umumiy: {total} so‘m")
+def checkout():
+    if not cart:
+        print("❗ Savat bo‘sh.")
+        return
+    show_cart()
+    confirm = input("To‘lov qilishni tasdiqlaysizmi? (ha/yo‘q): ").lower()
+    if confirm == "ha":
+        print("✅ Xaridingiz uchun rahmat!")
+        cart.clear()
+    else:
+        print("❌ To‘lov bekor qilindi.")
