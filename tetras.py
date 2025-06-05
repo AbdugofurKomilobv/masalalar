@@ -37,6 +37,9 @@ def main():
                     current_piece.rotation = (current_piece.rotation + 1) % len(current_piece.shape)
 
         draw_window(win)
+pygame.mixer.init()
+pygame.mixer.music.load("background.mp3")
+pygame.mixer.music.play(-1)  # loop forever
 
 
 # Ekran o'lchami
