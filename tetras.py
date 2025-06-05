@@ -42,6 +42,11 @@ pygame.mixer.music.load("background.mp3")
 pygame.mixer.music.play(-1)  # loop forever
 
 
+def show_score(score):
+    value = font.render("Ball: " + str(score), True, black)
+    win.blit(value, [10, 10])
+
+
 # Ekran o'lchami
 s_width = 300
 s_height = 600
