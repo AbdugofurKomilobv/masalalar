@@ -2,6 +2,42 @@ import pygame
 import random
 
 pygame.font.init()
+def main():
+    win = pygame.display.set_mode((s_width, s_height))
+    pygame.display.set_caption("🧱 Tetris o‘yini")
+
+    locked_positions = {}
+    change_piece = False
+    run = True
+    current_piece = Piece(5, 0, random.choice(shapes))
+    clock = pygame.time.Clock()
+    fall_time = 0
+
+    while run:
+        fall_speed = 0.5
+        fall_time += clock.get_rawtime()
+        clock.tick()
+
+        if fall_time / 1000 >= fall_speed:
+            fall_time = 0
+            current_piece.y += 1
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    current_piece.x -= 1
+                if event.key == pygame.K_RIGHT:
+                    current_piece.x += 1
+                if event.key == pygame.K_DOWN:
+                    current_piece.y += 1
+                if event.key == pygame.K_UP:
+                    current_piece.rotation = (current_piece.rotation + 1) % len(current_piece.shape)
+
+        draw_window(win)
+
 
 # Ekran o'lchami
 s_width = 300
